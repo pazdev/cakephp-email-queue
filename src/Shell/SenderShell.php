@@ -95,7 +95,7 @@ class SenderShell extends Shell
                     ->addHeaders($headers)
                     ->theme($theme)
                     ->viewVars($e->template_vars)
-                    ->messageId(false)
+                    ->setMessageId(false)
                     ->returnPath($email->from())
                     ->send();
             } catch (SocketException $exception) {
